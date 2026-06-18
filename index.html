@@ -180,6 +180,8 @@
             .hero-marquee { animation: none; }
         }
         .star-fill { font-variation-settings: 'FILL' 1, 'wght' 400, 'opsz' 24; }
+        /* Prevent any horizontal scroll on mobile */
+        html, body { overflow-x: hidden; max-width: 100%; }
         /* Soft ambient blobs — alternating sides, scroll with the page, below the hero */
         .sect-blob {
             position: absolute;
@@ -523,25 +525,6 @@ View Listings <span class="material-symbols-outlined text-[18px]">north_east</sp
 <img alt="REALTOR" class="h-8" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCsU6CLMyIPJaC-76ty3lbIg8iuKLg64aUU9tPq2CsSwnptYXBRrgEVfst5rSZ--XDBlDs8kXlnzHBeFa99U2t1Ku8Y5-nqFFwBq76aSgCnuvLVUc-GfWsAwY4f6d8ASUtADAc7yZsktgx-ZKsjqTcxDFBNCHXlU9h5svkulZyJnMWxzLPlM3_LDQXxmNsyZD0u7X3VSTNxULoBucsVX3KiCI-Tcicgicevm4Xm4UNkz2TzVRgMf7glGXUiPZ1TWV73FYbPVosZPW8"/>
 </div>
 </footer>
-<!-- Bottom Navigation for Mobile -->
-<nav class="md:hidden fixed bottom-0 left-0 w-full flex justify-around items-center py-3 bg-surface border-t border-outline-variant/50 z-50 rounded-t-xl shadow-lg">
-<a class="flex flex-col items-center justify-center text-primary font-bold transition-transform active:scale-90" href="#home">
-<span class="material-symbols-outlined">home_work</span>
-<span class="text-label-md font-label-md">Home</span>
-</a>
-<a class="flex flex-col items-center justify-center text-on-surface-variant transition-transform active:scale-90" href="#services">
-<span class="material-symbols-outlined">real_estate_agent</span>
-<span class="text-label-md font-label-md">Services</span>
-</a>
-<a class="flex flex-col items-center justify-center text-on-surface-variant transition-transform active:scale-90" href="#areas">
-<span class="material-symbols-outlined">location_on</span>
-<span class="text-label-md font-label-md">Areas</span>
-</a>
-<a class="flex flex-col items-center justify-center text-on-surface-variant transition-transform active:scale-90" href="#contact">
-<span class="material-symbols-outlined">mail</span>
-<span class="text-label-md font-label-md">Contact</span>
-</a>
-</nav>
 <script>
         // Mobile menu toggle
         const menuToggle = document.getElementById('menu-toggle');
